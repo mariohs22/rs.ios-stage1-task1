@@ -10,7 +10,8 @@
         unichar ndx = [string characterAtIndex:i];
         if (ndx == '(' || ndx == '[' || ndx == '<') {
             NSInteger endIndex = [self getEndingIndex:string brType:ndx startIndex:i];
-            [result addObject: [string substringWithRange:NSMakeRange(i+1, endIndex-i-1)]];
+            if (endIndex > 0)
+                [result addObject: [string substringWithRange:NSMakeRange(i+1, endIndex-i-1)]];
         }
     }
     return result;
