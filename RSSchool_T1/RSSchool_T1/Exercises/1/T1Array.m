@@ -4,18 +4,14 @@
 
 // Complete the following fuction
 - (NSArray *)convertToHappy:(NSArray *)sadArray {
-    NSMutableArray *result;
-    NSArray *res;
-    result = [NSMutableArray array];
-    res = [NSArray array];
+    NSMutableArray *result = [NSMutableArray array];
+    NSArray *res = @[];
 
-    NSUInteger cnt;
-    cnt = [sadArray count];
+    NSUInteger cnt = [sadArray count];
     if (cnt <= 2) return sadArray;
     
     [result addObject: [sadArray firstObject]];
-    int i;
-    for (i = 1; i < cnt-1; i++) {
+    for (int i = 1; i < cnt-1; i++) {
         id prevElement = [sadArray objectAtIndex:i-1];
         id currElement = [sadArray objectAtIndex:i];
         id nextElement = [sadArray objectAtIndex:i+1];

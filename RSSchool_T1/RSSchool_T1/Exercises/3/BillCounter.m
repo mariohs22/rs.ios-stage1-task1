@@ -4,9 +4,8 @@
 
 // Complete the following fuction
 - (NSString*)compareResultForBill:(NSArray<NSNumber*>*)bill notIncludingElementWithIndex:(NSInteger)index withGivenSum:(NSNumber*)sum {
-    NSMutableArray *tmpBill;
+    NSMutableArray *tmpBill = [NSMutableArray array];
     
-    tmpBill = [NSMutableArray array];
     [tmpBill addObjectsFromArray:bill];
     [tmpBill removeObjectAtIndex:index];
     NSNumber *partAnna = [tmpBill valueForKeyPath:@"@sum.self"];

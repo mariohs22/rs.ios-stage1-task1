@@ -7,8 +7,7 @@
     NSMutableArray *tmpArray, *summ;
     summ = [NSMutableArray array];
 
-    int i;
-    for (i = 0; i < [array count]; i++) {
+    for (int i = 0; i < [array count]; i++) {
         tmpArray = [NSMutableArray array];
         [tmpArray addObjectsFromArray:array];
         [tmpArray removeObjectAtIndex:i];
